@@ -1,0 +1,224 @@
+/* 🌟 General Styling */
+.simulator-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #111827; /* Light gray */
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  color: white;
+}
+
+.current-algo {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+}
+
+
+.current-algo span {
+  color: #ffdb5c;
+  font-weight: 700;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+
+/* 🌟 Title Styling */
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* 🌟 Process Input Fields */
+.process-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.process-input input {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* 🌟 Buttons Styling */
+button {
+  background-color: #3f3a3b;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #271b1d;
+  transform: scale(1.05);
+}
+
+/* 🌟 Process List */
+.process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.process-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.process-item button {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 🌟 Dropdown (Algorithm Selection) */
+select {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* 🌟 Control Buttons (Play, Pause, Reset) */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* 🌟 Performance Metrics */
+.metrics {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.metrics p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+  .simulator-container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .process-input input {
+      width: 100px;
+  }
+
+  .button-container {
+      flex-wrap: wrap;
+  }
+}
+
+/* 🌟 Gantt Chart Container */
+.gantt-chart {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+
+/* 🌟 Gantt Track */
+.gantt-track {
+  position: relative;
+  min-height: 70px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 10px 0;
+  display: block;
+  overflow-x: auto;
+}
+
+/* 🌟 Gantt Block (Animated) */
+.gantt-block {
+  position: absolute;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  white-space: nowrap;
+}
+
+/* 🌟 Slide-in Animation */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 Time Labels */
+.time-label {
+  position: absolute;
+  font-size: 12px;
+  color: #fff;
+  top: -18px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.time-label.start {
+  left: 0;
+}
+
+.time-label.end {
+  right: 0;
+}
+
+.timeline {
+  position: relative;
+  height: 30px;
+  margin-top: 10px;
+  background: none;
+}
+
+.timeline-label {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
